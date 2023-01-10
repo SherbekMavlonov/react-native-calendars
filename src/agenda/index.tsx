@@ -327,6 +327,7 @@ export default class Agenda extends Component<AgendaProps, State> {
     this.calendar?.current?.scrollToDay(day, this.calendarOffset(), withAnimation);
 
     this.setState({selectedDay: day});
+    this.calendar.scrollToDay?.(day, this.calendarOffset(), withAnimation && f); 
 
     this.props.onDayChange?.(xdateToData(day));
   };
