@@ -49,30 +49,30 @@ class Reservation extends Component<ReservationProps> {
     this.style = styleConstructor(props.theme);
   }
 
-  shouldComponentUpdate(nextProps: ReservationProps) {
-    const d1 = this.props.date;
-    const d2 = nextProps.date;
-    const r1 = this.props.item;
-    const r2 = nextProps.item;
+//   shouldComponentUpdate(nextProps: ReservationProps) {
+//     const d1 = this.props.date;
+//     const d2 = nextProps.date;
+//     const r1 = this.props.item;
+//     const r2 = nextProps.item;
     
-    let changed = true;
-    if (!d1 && !d2) {
-      changed = false;
-    } else if (d1 && d2) {
-      if (d1.getTime() !== d2.getTime()) {
-        changed = true;
-      } else if (!r1 && !r2) {
-        changed = false;
-      } else if (r1 && r2) {
-        if ((!d1 && !d2) || (d1 && d2)) {
-          if (isFunction(this.props.rowHasChanged)) {
-            changed = this.props.rowHasChanged(r1, r2);
-          }
-        }
-      }
-    }
-    return changed;
-  }
+//     let changed = true;
+//     if (!d1 && !d2) {
+//       changed = false;
+//     } else if (d1 && d2) {
+//       if (d1.getTime() !== d2.getTime()) {
+//         changed = true;
+//       } else if (!r1 && !r2) {
+//         changed = false;
+//       } else if (r1 && r2) {
+//         if ((!d1 && !d2) || (d1 && d2)) {
+//           if (isFunction(this.props.rowHasChanged)) {
+//             changed = this.props.rowHasChanged(r1, r2);
+//           }
+//         }
+//       }
+//     }
+//     return changed;
+//   }
 
   renderDate(date?: XDate, item?: AgendaEntry) {
     if (isFunction(this.props.renderDay)) {
