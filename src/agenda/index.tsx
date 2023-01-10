@@ -463,7 +463,7 @@ export default class Agenda extends Component<AgendaProps, State> {
     return (
       <View testID={testID} onLayout={this.onLayout} style={[style, this.style.container]}>
         <View style={this.style.reservations}>{this.renderReservations()}</View>
-<!--         <Animated.View style={headerStyle}>
+       /* <Animated.View style={headerStyle}>
           <Animated.View style={[this.style.animatedContainer, {transform: [{translateY: contentTranslate}]}]}>
             {this.renderCalendarList()}
           </Animated.View>
@@ -492,7 +492,8 @@ export default class Agenda extends Component<AgendaProps, State> {
             style={{height: agendaHeight + KNOB_HEIGHT}}
             onLayout={this.onScrollPadLayout}
           />
-        </Animated.ScrollView> -->
+        </Animated.ScrollView> 
+*/
       </View>
     );
   }
