@@ -82,7 +82,8 @@ const BasicDay = (props: BasicDayProps) => {
       if (selectedColor) {
         styles.push({backgroundColor: selectedColor});
       }
-    } else if (isToday) {
+    } 
+    if (isToday) {
       styles.push(style.current.today);
     }
 
